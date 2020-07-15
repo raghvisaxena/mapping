@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'leaflet/dist/leaflet.css';
-import { Map, TileLayer, Marker, Popup} from 'react-leaflet';
+import { Map, TileLayer, Marker, Popup, Polygon, Circle} from 'react-leaflet';
 import L from 'leaflet';
 
 delete L.Icon.Default.prototype._getIconUrl;
@@ -16,6 +16,19 @@ L.Icon.Default.mergeOptions({
 const location= [	22.719568, 75.857727];
 const zoom= 12;
 
+const gnrPolygon=[
+  [
+    [23.260612, 72.629068],
+    [23.275335, 72.674505],
+    [23.244282, 72.682421],
+    [23.186127, 72.655477],
+    [23.165617, 72.637748],
+    [23.193023, 72.602967],
+  ]
+];
+
+const bhpCircle=[23.25469, 77.40289];
+
 function App() {
   return (
     <div className="App">
@@ -26,6 +39,16 @@ function App() {
         Hey Stalker!
       </Popup>
       </Marker>
+      <Polygon positions={gnrPolygon}>
+      <Popup>
+        Where I currently study!
+      </Popup>
+      </Polygon>
+      <Circle center={bhpCircle} radius={10000}>
+      <Popup>
+        Second home!
+      </Popup>
+      </Circle>
      </Map>
     </div>
   );
