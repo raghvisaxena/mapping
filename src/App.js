@@ -44,13 +44,13 @@ function App() {
         Where I currently study!
       </Popup>
       </Polygon>
-      <Circle center={bhpCircle} radius={10000}>
+      <Circle color="yellow" opacity= {1} fillOpacity={0.7} fillColor="purple" dashArray = {30} center={bhpCircle} radius={10000}>
       <Popup>
         Second home!
       </Popup>
       </Circle>
      </Map>
-    </div>
+    </div> 
   );
 }
 
