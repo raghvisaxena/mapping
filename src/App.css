@@ -42,3 +42,42 @@
   width:100vw;
   height: 100vh;
 }
+
+.gnr{
+  fill:none;
+  stroke: aqua;
+  stroke-width:5px;
+  transition: stroke-width .5s;
+  animation: gnrPolygon infinite 5s;
+}
+
+.gnr:hover {
+  stroke-width:15px;
+}
+
+@keyframes gnrPolygon {
+  0%{
+    stroke: red;
+  }
+  14%{
+    stroke: orange;
+  }
+  28%{
+    stroke: yellow;
+  }
+  43%{
+    stroke: lime;
+  }
+  57%{
+    stroke: blue;
+  }
+  71%{
+    stroke: blueviolet;
+  }
+  85%{
+    stroke: magenta;
+  }
+  100%{
+    stroke: red;
+  }
+}

@@ -39,7 +39,7 @@ function App() {
         Hey Stalker!
       </Popup>
       </Marker>
-      <Polygon positions={gnrPolygon}>
+      <Polygon className="gnr" positions={gnrPolygon}>
       <Popup>
         Where I currently study!
       </Popup>
